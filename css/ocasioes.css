@@ -1,0 +1,296 @@
+.ocasioes-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ocasioes-page main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+}
+
+.ocasioes-page .intro-ocasioes {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ocasioes-page .intro-ocasioes h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.ocasioes-page .intro-ocasioes p {
+    font-size: 1.02rem;
+    color: #555;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.ocasioes-page .ocasioes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.ocasioes-page .ocasioes .oc-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(16px);
+    opacity: 0;
+    animation: ocFadeUp 0.6s ease forwards;
+}
+
+.ocasioes-page .ocasioes .oc-item:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.ocasioes-page .ocasioes .oc-item:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.ocasioes-page .ocasioes .oc-item:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.ocasioes-page .oc-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.ocasioes-page .oc-img-wrap img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ocasioes-page .oc-item:hover .oc-img-wrap img {
+    transform: scale(1.06);
+}
+
+.ocasioes-page .oc-tag {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.ocasioes-page .oc-item h3 {
+    padding: 15px 12px 3px;
+    font-size: 1.25rem;
+}
+
+.ocasioes-page .oc-item p {
+    padding: 0 12px 14px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@keyframes ocFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ocasioes-page .oc-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 60;
+}
+
+.ocasioes-page .oc-modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ocasioes-page .oc-modal-dialog {
+    background: #ffffff;
+    border-radius: 18px;
+    max-width: 860px;
+    width: 100%;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.4);
+    transform: translateY(14px);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ocasioes-page .oc-modal-overlay.is-open .oc-modal-dialog {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ocasioes-page .oc-modal-dialog::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(242,181,196,0.18), transparent 55%);
+    pointer-events: none;
+}
+
+.ocasioes-page .oc-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.06);
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ocasioes-page .oc-modal-close:hover {
+    background: rgba(0,0,0,0.13);
+    transform: scale(1.03);
+}
+
+.ocasioes-page .oc-modal-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 24px;
+    padding: 22px 24px 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.ocasioes-page .oc-modal-image-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    max-height: 360px;
+}
+
+.ocasioes-page .oc-modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.03);
+    transition: transform 3s ease;
+}
+
+.ocasioes-page .oc-modal-overlay.is-open .oc-modal-img {
+    transform: scale(1.08);
+}
+
+.ocasioes-page .oc-modal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ocasioes-page .oc-modal-title {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.ocasioes-page .oc-modal-description {
+    font-size: 0.98rem;
+    color: #555;
+}
+
+.ocasioes-page .oc-modal-extra h4 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+.ocasioes-page .oc-modal-message {
+    font-size: 0.98rem;
+    color: #444;
+}
+
+.ocasioes-page .oc-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.ocasioes-page .oc-modal-catalogo {
+    background: #ffffff;
+    color: var(--verde-escuro);
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: none;
+}
+
+.ocasioes-page .oc-modal-catalogo:hover {
+    background: #f7f7f7;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+}
+
+body.ocasioes-page.oc-modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .ocasioes-page .oc-modal-body {
+        grid-template-columns: 1fr;
+        padding: 18px 18px 20px;
+    }
+
+    .ocasioes-page .oc-modal-image-wrap {
+        max-height: 260px;
+    }
+
+    .ocasioes-page .oc-modal-dialog {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ocasioes-page main {
+        padding-top: 30px;
+    }
+
+    .ocasioes-page header h1 {
+        font-size: 1.5rem;
+    }
+
+    .ocasioes-page .oc-modal-dialog {
+        border-radius: 14px;
+    }
+
+    .ocasioes-page .oc-modal-title {
+        font-size: 1.35rem;
+    }
+
+    .ocasioes-page .oc-modal-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

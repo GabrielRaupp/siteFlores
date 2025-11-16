@@ -1,0 +1,279 @@
+.catalogo-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.catalogo-page main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px 40px;
+}
+
+.catalogo-page header h1 {
+    font-size: 1.9rem;
+    letter-spacing: 0.03em;
+}
+
+.catalogo-page .catalogo {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin: 0 auto 40px;
+}
+
+.catalogo-page .catalogo .item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(16px) scale(0.98);
+    opacity: 0;
+    border-radius: 14px;
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        box-shadow 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    margin-bottom: 70pt;
+}
+
+.catalogo-page .catalogo .item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0, 0, 0, 0.12), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.catalogo-page .catalogo .item.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.catalogo-page .catalogo .item:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.catalogo-page .catalogo .item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.catalogo-page .catalogo .item:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.catalogo-page .catalogo .item:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+.catalogo-page .catalogo .item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.catalogo-page .catalogo .item:hover::before {
+    opacity: 1;
+}
+
+.catalogo-page .catalogo .item:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.catalogo-page .catalogo .item img {
+    transition: transform 0.35s ease;
+    display: block;
+}
+
+.catalogo-page .catalogo .item:hover img {
+    transform: scale(1.06);
+}
+
+.catalogo-page .catalogo .item h3 {
+    font-size: 1.15rem;
+}
+
+.catalogo-page .catalogo .item p {
+    margin-bottom: 4px;
+}
+
+.catalogo-page .catalogo .btn {
+    margin: 10px 12px 18px;
+}
+
+.catalogo-page .catalogo .item .btn {
+    position: relative;
+    z-index: 2;
+}
+
+.catalogo-page .modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 60;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.catalogo-page .modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.catalogo-page .modal-dialog {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 860px;
+    width: 100%;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    transform: translateY(14px) scale(0.97);
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.catalogo-page .modal-overlay.is-open .modal-dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.catalogo-page .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.06);
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 2;
+}
+
+.catalogo-page .modal-close:hover {
+    background: rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.catalogo-page .modal-body {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 24px;
+    padding: 28px 30px 30px;
+    align-items: center;
+}
+
+.catalogo-page .modal-image-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    max-height: 360px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+
+.catalogo-page .modal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.03);
+    transition: transform 3s ease;
+}
+
+.catalogo-page .modal-overlay.is-open .modal-img {
+    transform: scale(1.08);
+}
+
+.catalogo-page .modal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalogo-page .modal-title {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.catalogo-page .modal-price {
+    font-weight: 700;
+    color: var(--verde);
+    margin-bottom: 4px;
+}
+
+.catalogo-page .modal-description {
+    font-size: 0.97rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.catalogo-page .modal-whatsapp {
+    align-self: flex-start;
+    margin-top: 12px;
+    padding-inline: 26px;
+}
+
+body.catalogo-page.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 800px) {
+    .catalogo-page .modal-body {
+        grid-template-columns: 1fr;
+        padding: 20px 20px 22px;
+    }
+
+    .catalogo-page .modal-dialog {
+        max-width: 520px;
+    }
+
+    .catalogo-page .modal-image-wrap {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogo-page main {
+        padding-top: 30px;
+    }
+
+    .catalogo-page header h1 {
+        font-size: 1.6rem;
+    }
+
+    .catalogo-page .modal-dialog {
+        border-radius: 16px;
+    }
+
+    .catalogo-page .modal-title {
+        font-size: 1.4rem;
+    }
+
+    .catalogo-page .catalogo {
+        gap: 20px;
+    }
+}

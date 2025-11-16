@@ -1,0 +1,258 @@
+body.dicas-page {
+    background: #e3e0d5;
+}
+
+
+.dicas-page #dicas-main {
+    padding: 40px 20px 70px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+
+.dicas-hero {
+    position: relative;
+    margin-top: 38px;
+    margin-bottom: 30px;
+    padding: 24px 22px 26px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde));
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.dicas-hero::before,
+.dicas-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+.dicas-hero::before {
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.45), transparent 60%);
+    top: -90px;
+    right: -80px;
+    opacity: 0.9;
+}
+
+.dicas-hero::after {
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(242, 181, 196, 0.8), transparent 60%);
+    bottom: -60px;
+    left: -50px;
+    opacity: 0.75;
+}
+
+.dicas-hero-texto {
+    position: relative;
+    z-index: 1;
+}
+
+.dicas-hero h2 {
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+}
+
+.dicas-hero p {
+    max-width: 520px;
+    font-size: 0.98rem;
+    margin-bottom: 14px;
+}
+
+
+.dicas-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dicas-badge {
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+}
+
+
+.dicas-list {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.dica-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px 18px 22px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+    border-top: 4px solid var(--acento);
+    transform: translateY(0);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.dica-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    border-color: var(--verde-escuro);
+}
+
+.dica-card-topo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.dica-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(79, 111, 82, 0.08);
+}
+
+.dica-card h2 {
+    font-size: 1.18rem;
+    color: var(--verde-escuro);
+}
+
+.dica-resumo {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.dica-card ul {
+    margin-left: 18px;
+    margin-top: 4px;
+    line-height: 1.7;
+    font-size: 0.94rem;
+}
+
+.dica-card li + li {
+    margin-top: 4px;
+}
+
+
+.dicas-page .dicas-extra {
+    margin-top: 32px;
+    border-left: 4px solid var(--verde);
+    padding-left: 20px;
+}
+
+
+[data-animate-dica] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+[data-animate-dica].in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dicas-list .dica-card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.dicas-list .dica-card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.dicas-list .dica-card:nth-child(3) {
+    transition-delay: 0.18s;
+}
+
+
+.dicas-page .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 22px;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    background: var(--verde-escuro);
+    color: #fff;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    z-index: 40;
+}
+
+.dicas-page .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dicas-page .back-to-top:hover {
+    background: var(--verde);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.30);
+}
+
+
+@media (max-width: 700px) {
+    .dicas-hero {
+        padding: 22px 18px 24px;
+        margin-top: 32px;
+    }
+
+    .dicas-hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .dicas-hero p {
+        max-width: none;
+    }
+
+    .dicas-badges {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 500px) {
+    .dicas-page #dicas-main {
+        padding-bottom: 80px;
+    }
+
+    .dicas-page .back-to-top {
+        right: 14px;
+        bottom: 16px;
+    }
+}

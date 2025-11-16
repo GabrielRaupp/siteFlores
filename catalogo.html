@@ -5,46 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/catalogo.css">
 </head>
-<body>
+<body class="catalogo-page">
 
-<header>
-    <h1>Catálogo de Flores</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="ocasioes.html">Ocasiões</a>
-        <a href="dicas.html">Dicas</a>
-        <a href="sobre.html">Sobre</a>
-    </nav>
+<header id="topo">
+    <section class="header-inner">
+        <h1>Catálogo de Flores</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="flores.html">Flores</a>
+            <a href="ocasioes.html">Ocasiões</a>
+            <a href="dicas.html">Dicas</a>
+            <a href="sobre.html">Sobre</a>
+            
+        </nav>
+    </section>
 </header>
 
-<section class="catalogo">
-    <div class="item">
-        <img src="img/mudasGladiolos.jpeg">
-        <h3>Gladíolos - Palmas</h3>
-        <p>R$ x</p>
-        <a class="btn" href="https://wa.me/5548988166865?text=Quero%20este%20buquê!">Comprar</a>
-    </div>
+<main>
+    <section class="catalogo" data-animate="fade-up">
+        <article class="item"
+             data-descricao="Gladíolos (palmas) ideais para buquês altos e arranjos marcantes. Disponíveis em cores variadas."
+        >
+            <img src="img/flor.png" alt="Gladíolos - Palmas">
+            <h3>Gladíolos - Palmas</h3>
+            <p>R$ 79,90</p>
+            <a class="btn" href="https://wa.me/5548988166865?text=Quero%20este%20buqu%C3%AA!">Comprar</a>
+        </article>
 
-    <div class="item">
-        <img src="img/flor2.jpg">
-        <h3>Orquídea Branca</h3>
-        <p>R$ 89,90</p>
-        <a class="btn" href="https://wa.me/5548988166865?text=Quero%20esta%20orquídea!">Comprar</a>
-    </div>
+        <article class="item"
+             data-descricao="Orquídea branca clássica, perfeita para presentear em ocasiões elegantes e especiais."
+        >
+            <img src="img/flor2.png" alt="Orquídea Branca">
+            <h3>Orquídea Branca</h3>
+            <p>R$ 89,90</p>
+            <a class="btn" href="https://wa.me/5548988166865?text=Quero%20esta%20orqu%C3%ADdea!">Comprar</a>
+        </article>
 
-    <div class="item">
-        <img src="img/flor3.jpg">
-        <h3>Arranjo Colorido</h3>
-        <p>R$ 69,90</p>
-        <a class="btn" href="https://wa.me/5548988166865?text=Quero%20este%20arranjo!">Comprar</a>
-    </div>
+        <article class="item"
+             data-descricao="Arranjo colorido com flores variadas para decorar ambientes e surpreender em qualquer momento."
+        >
+            <img src="img/flor3.png" alt="Arranjo Colorido">
+            <h3>Arranjo Colorido</h3>
+            <p>R$ 69,90</p>
+            <a class="btn" href="https://wa.me/5548988166865?text=Quero%20este%20arranjo!">Comprar</a>
+        </article>
+    </section>
+</main>
+
+<section class="modal-overlay" data-modal-overlay>
+    <section class="modal-dialog">
+        <button class="modal-close" type="button" aria-label="Fechar">&times;</button>
+        <section class="modal-body">
+            <section class="modal-image-wrap">
+                <img src="" alt="" class="modal-img">
+            </section>
+            <section class="modal-info">
+                <h3 class="modal-title"></h3>
+                <p class="modal-price"></p>
+                <p class="modal-description"></p>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn modal-whatsapp">
+                    Comprar pelo WhatsApp
+                </a>
+            </section>
+        </section>
+    </section>
 </section>
 
 <footer>
     <p>© 2025 Cida Flores</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> •
+    <a href="https://wa.me/5548988166865" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </footer>
 
+<script src="js/script.js"></script>
+<script src="js/catalogo.js"></script>
 </body>
 </html>
