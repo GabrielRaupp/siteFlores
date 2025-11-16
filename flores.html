@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores • Catálogo</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/flores.css">
+</head>
+<body class="flores-page">
+
+<header id="topo">
+    <section class="header-inner">
+        <h1>Flores & Arranjos</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="flores.html">Flores</a>
+            <a href="ocasioes.html">Ocasiões</a>
+            <a href="dicas.html">Dicas</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </section>
+</header>
+
+<main>
+    <section class="filtros-bloco" aria-label="Filtros e campo de pesquisa">
+        <section class="filtros-topo">
+            <h2>Encontre a flor perfeita</h2>
+            <p>Busque pelo nome ou filtre por categoria, ocasião e valor.</p>
+        </section>
+
+        <form class="filtros-form" autocomplete="off">
+            <section class="filtro-linha">
+                <section class="filtro-campo filtro-busca">
+                    <label for="campo-busca">
+                        Buscar
+                        <input
+                            type="search"
+                            id="campo-busca"
+                            placeholder="Digite nome ou palavra-chave..."
+                            aria-label="Buscar produtos por nome ou ocasião">
+                    </label>
+                </section>
+
+                <section class="filtro-campo">
+                    <label for="filtro-categoria">
+                        Categoria
+                        <select id="filtro-categoria">
+                            <option value="">Todas</option>
+                            <option value="buque">Buquês</option>
+                            <option value="arranjo">Arranjos</option>
+                            <option value="vaso">Flores em vaso</option>
+                        </select>
+                    </label>
+                </section>
+
+                <section class="filtro-campo">
+                    <label for="filtro-ocasiao">
+                        Ocasião
+                        <select id="filtro-ocasiao">
+                            <option value="">Todas</option>
+                            <option value="aniversario">Aniversário</option>
+                            <option value="romantico">Romântico</option>
+                            <option value="condolencias">Condolências</option>
+                            <option value="decoracao">Decoração</option>
+                        </select>
+                    </label>
+                </section>
+
+                <section class="filtro-campo">
+                    <label for="ordem">
+                        Ordenar
+                        <select id="ordem">
+                            <option value="relevancia">Relevância</option>
+                            <option value="preco-asc">Preço: menor para maior</option>
+                            <option value="preco-desc">Preço: maior para menor</option>
+                            <option value="nome-asc">Nome: A → Z</option>
+                        </select>
+                    </label>
+                </section>
+
+                <section class="filtro-acoes">
+                    <button type="reset" class="btn btn-reset">
+                        Limpar filtros
+                    </button>
+                </section>
+            </section>
+        </form>
+    </section>
+
+    <section class="lista-produtos" aria-live="polite">
+        <section class="lista-cabecalho">
+            <h2>Produtos</h2>
+            <p class="contador-resultados">
+                Exibindo <span id="contador-itens">0</span> produtos
+            </p>
+        </section>
+
+        <section class="grade-produtos">
+
+            <article class="produto item-animado"
+                     data-categoria="buque"
+                     data-ocasiao="romantico"
+                     data-preco="89.90"
+                     data-tags="rosa rosas amor romance cores variadas"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Rosa</h3>
+                    <p class="produto-resumo">Várias cores, clássica e símbolo de amor.</p>
+                    <p class="produto-preco">R$ 89,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Rosas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjo"
+                     data-ocasiao="aniversario"
+                     data-preco="59.90"
+                     data-tags="margarida margaridas branca amarelo delicada aniversario"
+                     data-gallery="produtos/margarida.jpg,produtos/margarida2.jpeg,produtos/margaridas3.png">
+                <figure class="produto-imagem">
+                    <img src="produtos/margarida.jpg" alt="Margarida – pétalas brancas e centro amarelo.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Margarida</h3>
+                    <p class="produto-resumo">Pétalas brancas e centro amarelo, delicada e alegre.</p>
+                    <p class="produto-preco">R$ 59,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Margaridas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="buque"
+                     data-ocasiao="aniversario"
+                     data-preco="79.90"
+                     data-tags="girassol girassois amarelo sol alegria"
+                     data-gallery="produtos/girassol.png,produtos/girassol2.jpeg,produtos/girassol3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/girassol.png" alt="Girassol – grande, amarelo, segue a luz do sol.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Girassol</h3>
+                    <p class="produto-resumo">Flor grande e amarela que acompanha a luz do sol.</p>
+                    <p class="produto-preco">R$ 79,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20um%20buqu%C3%AA%20de%20Girass%C3%B3is"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="vaso"
+                     data-ocasiao="decoracao"
+                     data-preco="99.90"
+                     data-tags="tulipa tulipas jardim europeu cores variadas"
+                     data-gallery="produtos/tulipa.png,produtos/tulipa2.png,produtos/tulipa3.jpeg">
+                <figure class="produto-imagem">
+                    <img src="produtos/tulipa.png" alt="Tulipa – comum em jardins europeus, muitas cores.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Tulipa</h3>
+                    <p class="produto-resumo">Clássica de jardins europeus, disponível em várias cores.</p>
+                    <p class="produto-preco">R$ 99,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20Tulipas%20para%20presente"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="buque"
+                     data-ocasiao="romantico"
+                     data-preco="109.90"
+                     data-tags="lirio lirios perfume elegante"
+                     data-gallery="produtos/lirio.jpeg,produtos/lirio2.jpeg,produtos/lirio3.png">
+                <figure class="produto-imagem">
+                    <img src="produtos/lirio.jpeg" alt="Lírio – pétalas elegantes, perfume forte em algumas espécies.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Lírio</h3>
+                    <p class="produto-resumo">Pétalas elegantes e perfume marcante em algumas espécies.</p>
+                    <p class="produto-preco">R$ 109,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20um%20buqu%C3%AA%20de%20L%C3%ADrios"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjo"
+                     data-ocasiao="condolencias"
+                     data-preco="119.90"
+                     data-tags="copo de leite copo-de-leite branco arranjos"
+                     data-gallery="produtos/copoleite.png,produtos/copoleite2.jpg,produtos/copoleite3.png">
+                <figure class="produto-imagem">
+                    <img src="produtos/copoleite.png" alt="Copo-de-leite – branca, muito usada em arranjos.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Copo-de-leite</h3>
+                    <p class="produto-resumo">Flor branca sofisticada, muito usada em arranjos elegantes.</p>
+                    <p class="produto-preco">R$ 119,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Copo-de-leite"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="vaso"
+                     data-ocasiao="decoracao"
+                     data-preco="69.90"
+                     data-tags="hibisco flor grande regiao quente tropical"
+                     data-gallery="produtos/hibisco.png,produtos/hibisco2.jpg,produtos/hibisco3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/hibisco.png" alt="Hibisco – flor grande, comum em regiões quentes.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Hibisco</h3>
+                    <p class="produto-resumo">Flor grande e tropical, ideal para ambientes iluminados.</p>
+                    <p class="produto-preco">R$ 69,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20Hibiscos%20para%20decora%C3%A7%C3%A3o"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjo"
+                     data-ocasiao="aniversario"
+                     data-preco="64.90"
+                     data-tags="crisantemo crisântemo buqu%C3%AAs vasos"
+                     data-gallery="produtos/crisantemo.jpeg,produtos/crisantemo2.png,produtos/crisantemo3.jpeg">
+                <figure class="produto-imagem">
+                    <img src="produtos/crisantemo.jpeg" alt="Crisântemo – muito usado em buquês e vasos.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Crisântemo</h3>
+                    <p class="produto-resumo">Versátil, muito usado em buquês e vasos decorativos.</p>
+                    <p class="produto-preco">R$ 64,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20Cris%C3%A2ntemos"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="vaso"
+                     data-ocasiao="decoracao"
+                     data-preco="84.90"
+                     data-tags="azaleia arbusto florido cores variadas"
+                     data-gallery="produtos/azaleia.jpg,produtos/azaleia2.jpg,produtos/azaleia3.jpeg">
+                <figure class="produto-imagem">
+                    <img src="produtos/azaleia.jpg" alt="Azaleia – arbusto florido, muitas cores.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Azaleia</h3>
+                    <p class="produto-resumo">Arbusto florido com muitas cores para jardins e sacadas.</p>
+                    <p class="produto-preco">R$ 84,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20Azaleias"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="buque"
+                     data-ocasiao="romantico"
+                     data-preco="94.90"
+                     data-tags="camelia cam%C3%A9lia petalas muitas lembra rosa"
+                     data-gallery="produtos/camelia.png,produtos/camelia2.png,produtos/camelia3.png">
+                <figure class="produto-imagem">
+                    <img src="produtos/camelia.png" alt="Camélia – flor cheia de pétalas, lembra uma rosa.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Camélia</h3>
+                    <p class="produto-resumo">Flor cheia de pétalas, aparência parecida com a rosa.</p>
+                    <p class="produto-preco">R$ 94,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20Camelias"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjo"
+                     data-ocasiao="decoracao"
+                     data-preco="74.90"
+                     data-tags="cosmo cosmos campestre colorido"
+                     data-gallery="produtos/cosmo.jpg,produtos/cosmo2.png,produtos/cosmo3.png">
+                <figure class="produto-imagem">
+                    <img src="produtos/cosmo.jpg" alt="Cosmo – flor campestre colorida.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Cosmo</h3>
+                    <p class="produto-resumo">Flor campestre com visual leve e colorido.</p>
+                    <p class="produto-preco">R$ 74,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Cosmos"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="vaso"
+                     data-ocasiao="decoracao"
+                     data-preco="54.90"
+                     data-tags="violeta violetas vaso pequeno delicada"
+                     data-gallery="produtos/violeta.png,produtos/violeta2.jpg,produtos/violeta3.jpeg">
+                <figure class="produto-imagem">
+                    <img src="produtos/violeta.png" alt="Violeta – flor delicada em vaso pequeno.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Violeta</h3>
+                    <p class="produto-resumo">Flor delicada em vaso pequeno, ideal para interiores.</p>
+                    <p class="produto-preco">R$ 54,90</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988166865?text=Quero%20Violetas%20em%20vaso"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+        </section>
+
+        <section class="mensagem-sem-resultados" aria-live="polite" hidden>
+            <p>Nenhum produto encontrado com os filtros atuais. Tente ajustar a busca.</p>
+        </section>
+    </section>
+</main>
+
+<section class="modal-overlay" data-modal-overlay>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button class="modal-close" type="button" aria-label="Fechar">&times;</button>
+        <section class="modal-body">
+            <section class="modal-media">
+                <figure class="modal-image-wrap">
+                    <img src="" alt="" class="modal-image">
+                </figure>
+                <section class="modal-controles">
+                    <button type="button" class="modal-nav modal-anterior" aria-label="Imagem anterior">&#10094;</button>
+                    <button type="button" class="modal-nav modal-proximo" aria-label="Próxima imagem">&#10095;</button>
+                </section>
+                <section class="modal-thumbs-wrap">
+                    <ul class="modal-thumbs"></ul>
+                </section>
+            </section>
+            <section class="modal-info">
+                <h3 class="modal-title" id="modal-titulo"></h3>
+                <p class="modal-desc"></p>
+                <p class="modal-price"></p>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn modal-whatsapp">
+                    Comprar pelo WhatsApp
+                </a>
+            </section>
+        </section>
+    </section>
+</section>
+
+<footer>
+    <p>© 2025 Cida Flores</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> •
+    <a href="https://wa.me/5548988166865" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/flores.js"></script>
+</body>
+</html>

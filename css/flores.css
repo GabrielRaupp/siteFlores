@@ -1,0 +1,523 @@
+.flores-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f8faf9 0%, #fdfdfd 40%, #fafafa 100%);
+}
+
+.flores-page main {
+    flex: 1;
+    padding: 34px 20px 50px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.flores-page header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+}
+
+.flores-page .filtros-bloco {
+    margin-bottom: 28px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px 26px 22px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.flores-page .filtros-topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.flores-page .filtros-topo h2 {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+}
+
+.flores-page .filtros-topo p {
+    font-size: 0.95rem;
+    color: #555;
+    max-width: 420px;
+}
+
+.flores-page .filtros-form {
+    margin-top: 0;
+}
+
+.flores-page .filtro-linha {
+    display: grid;
+    grid-template-columns: minmax(220px, 2.3fr) repeat(3, minmax(150px, 1fr)) minmax(160px, 0.9fr);
+    gap: 14px 18px;
+    align-items: stretch;
+}
+
+.flores-page .filtro-campo label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.86rem;
+    color: #444;
+}
+
+.flores-page .filtro-campo input,
+.flores-page .filtro-campo select {
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 0.95rem;
+    outline: none;
+    background: #fbfbfb;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, transform 0.12s ease;
+}
+
+.flores-page .filtro-campo input:focus,
+.flores-page .filtro-campo select:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.14);
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.flores-page .filtro-busca input {
+    width: 100%;
+}
+
+.flores-page .filtro-acoes {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.flores-page .btn-reset {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding-inline: 20px;
+    border-radius: 999px;
+    width: 100%;
+    max-width: 170px;
+    margin: 0;
+}
+
+.flores-page .lista-produtos {
+    margin-top: 10px;
+}
+
+.flores-page .lista-cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.flores-page .lista-cabecalho h2 {
+    font-size: 1.2rem;
+}
+
+.flores-page .contador-resultados {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.flores-page .grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.flores-page .produto {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.28s ease, transform 0.28s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+    cursor: pointer;
+}
+
+.flores-page .produto-visivel {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.flores-page .produto:hover {
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.flores-page .produto-imagem {
+    max-height: 210px;
+    overflow: hidden;
+}
+
+.flores-page .produto-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.flores-page .produto:hover .produto-imagem img {
+    transform: scale(1.06);
+}
+
+.flores-page .produto-conteudo {
+    padding: 12px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.flores-page .produto h3 {
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+}
+
+.flores-page .produto-resumo {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.flores-page .produto-preco {
+    font-weight: 700;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    color: var(--verde);
+}
+
+.flores-page .produto-oculto {
+    display: none !important;
+    opacity: 0;
+    transform: none;
+}
+
+.flores-page .mensagem-sem-resultados {
+    margin-top: 22px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.03);
+    font-size: 0.95rem;
+}
+
+body.flores-page.modal-open {
+    overflow: hidden;
+}
+
+.flores-page .modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    margin: 0;
+    background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 55%),
+        rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+    z-index: 60;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.flores-page .modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.flores-page .modal-dialog {
+    background: linear-gradient(135deg, #ffffff 0%, #f9faf9 55%, #ffffff 100%);
+    border-radius: 22px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.06);
+    transform: translateY(18px) scale(0.95);
+    opacity: 0;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.flores-page .modal-overlay.is-open .modal-dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.flores-page .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.06);
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    z-index: 2;
+}
+
+.flores-page .modal-close:hover {
+    background: rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.flores-page .modal-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 24px;
+    padding: 26px 26px 24px;
+    align-items: center;
+}
+
+.flores-page .modal-media {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+
+.flores-page .modal-image-wrap {
+    border-radius: 18px;
+    overflow: hidden;
+    max-height: 360px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+    position: relative;
+}
+
+.flores-page .modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform 2.2s ease;
+}
+
+.flores-page .modal-overlay.is-open .modal-image {
+    transform: scale(1.06);
+}
+
+.flores-page .modal-controles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.flores-page .modal-nav {
+    border: none;
+    border-radius: 999px;
+    padding: 7px 18px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.07);
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.flores-page .modal-nav:hover {
+    background: rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.flores-page .modal-thumbs-wrap {
+    margin-top: 4px;
+}
+
+.flores-page .modal-thumbs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    list-style: none;
+}
+
+.flores-page .modal-thumbs li {
+    flex: 0 0 auto;
+}
+
+.flores-page .modal-thumb-btn {
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.65;
+    transition: opacity 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    background: transparent;
+}
+
+.flores-page .modal-thumb-btn img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.flores-page .modal-thumb-btn.is-active,
+.flores-page .modal-thumb-btn:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
+}
+
+.flores-page .modal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flores-page .modal-title {
+    font-size: 1.55rem;
+    margin-bottom: 2px;
+}
+
+.flores-page .modal-desc {
+    font-size: 0.96rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.flores-page .modal-price {
+    font-weight: 700;
+    color: var(--verde);
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+.flores-page .modal-whatsapp {
+    align-self: flex-start;
+    margin-top: 12px;
+    padding-inline: 26px;
+}
+
+@media (max-width: 900px) {
+    .flores-page main {
+        padding-top: 26px;
+    }
+
+    .flores-page .filtros-bloco {
+        padding: 18px 18px 18px;
+    }
+
+    .flores-page .filtros-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .flores-page .filtro-linha {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .flores-page .btn-reset {
+        max-width: none;
+    }
+
+    .flores-page .modal-body {
+        grid-template-columns: 1fr;
+        padding: 20px 20px 22px;
+    }
+
+    .flores-page .modal-dialog {
+        max-width: 560px;
+    }
+
+    .flores-page .modal-image-wrap {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .flores-page main {
+        padding: 24px 14px 40px;
+    }
+
+    .flores-page header h1 {
+        font-size: 1.6rem;
+    }
+
+    .flores-page .filtros-bloco {
+        padding: 16px 14px 18px;
+        gap: 14px;
+    }
+
+    .flores-page .filtros-topo {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .flores-page .filtros-topo p {
+        max-width: none;
+    }
+
+    .flores-page .filtro-linha {
+        grid-template-columns: 1fr;
+        gap: 10px 0;
+    }
+
+    .flores-page .filtro-campo label {
+        font-size: 0.84rem;
+    }
+
+    .flores-page .btn-reset {
+        width: 100%;
+    }
+
+    .flores-page .grade-produtos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .flores-page .modal-dialog {
+        border-radius: 16px;
+        max-width: 100%;
+    }
+
+    .flores-page .modal-title {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .flores-page main {
+        padding-inline: 10px;
+    }
+
+    .flores-page .filtros-bloco {
+        padding-inline: 12px;
+    }
+
+    .flores-page .produto-conteudo {
+        padding-inline: 10px;
+    }
+
+    .flores-page .modal-body {
+        padding: 18px 14px 18px;
+    }
+}

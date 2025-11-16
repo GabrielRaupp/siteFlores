@@ -5,31 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dicas de Cuidado</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/dicas.css">
 </head>
-<body>
+<body class="dicas-page">
 
-<header>
-    <h1>Dicas Para Suas Flores Durarem Mais</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="ocasioes.html">Ocasiões</a>
-        <a href="dicas.html">Dicas</a>
-        <a href="sobre.html">Sobre</a>
-    </nav>
+<header id="topo">
+    <section class="header-inner">
+        <h1>Cida Flores</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="flores.html">Flores</a>
+            <a href="ocasioes.html">Ocasiões</a>
+            <a href="dicas.html">Dicas</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </section>
 </header>
 
-<section class="texto">
-    <h2>Como cuidar de buquês</h2>
-    <p>Troque a água diariamente e corte 1 cm da haste.</p>
+<main id="dicas-main">
+    <section class="dicas-hero" data-animate-dica>
+        <section class="dicas-hero-texto">
+            <h2>Cuide bem das suas flores 🌸</h2>
+            <p>
+                Pequenas ações no dia a dia fazem suas flores durarem muito mais.
+                Veja abaixo dicas rápidas e fáceis de aplicar em casa.
+            </p>
+            <section class="dicas-badges">
+                <span class="dicas-badge">+ Durabilidade</span>
+                <span class="dicas-badge">Cuidado simples</span>
+                <span class="dicas-badge">Resultado na hora</span>
+            </section>
+        </section>
+    </section>
 
-    <h2>Como manter orquídeas vivas</h2>
-    <p>Luz indireta, pouca água e nada de encharcar.</p>
-</section>
+    <section class="dicas-list" aria-label="Dicas de cuidado com flores">
+        <article class="dica-card" id="dica-buques" data-animate-dica>
+            <section class="dica-card-topo">
+                <span class="dica-icon">💐</span>
+                <h2>Como cuidar de buquês</h2>
+            </section>
+            <p class="dica-resumo">
+                Mantenha sempre a água limpa e as hastes renovadas.
+            </p>
+            <ul>
+                <li>Troque a água do vaso <strong>diariamente</strong>.</li>
+                <li>Corte cerca de <strong>1 cm</strong> da haste em diagonal.</li>
+                <li>Use um vaso limpo e, se possível, água filtrada.</li>
+                <li>Evite sol direto e locais muito quentes.</li>
+            </ul>
+        </article>
+
+        <article class="dica-card" id="dica-orquideas" data-animate-dica>
+            <section class="dica-card-topo">
+                <span class="dica-icon">🌺</span>
+                <h2>Como manter orquídeas vivas</h2>
+            </section>
+            <p class="dica-resumo">
+                Orquídeas gostam de luz indireta e pouca água.
+            </p>
+            <ul>
+                <li>Deixe em local com <strong>luz indireta</strong> e bem ventilado.</li>
+                <li>Regue apenas quando o substrato estiver quase seco.</li>
+                <li>Evite encharcar: excesso de água apodrece as raízes.</li>
+                <li>Não use pratos com água embaixo do vaso.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="texto dicas-extra" data-animate-dica>
+        <h2>Dica rápida extra</h2>
+        <p>
+            Evite colocar flores perto de frutas muito maduras.
+            Elas liberam etileno, que acelera o envelhecimento das flores.
+        </p>
+        <p>
+            Sempre que possível, retire folhas que fiquem abaixo da linha da água:
+            isso evita mau cheiro e proliferação de bactérias.
+        </p>
+    </section>
+</main>
+
+<button type="button" class="back-to-top" aria-label="Voltar ao topo">
+    ▲
+</button>
 
 <footer>
     <p>© 2025 Cida Flores</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> •
+    <a href="https://wa.me/5548988166865" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </footer>
 
+<script src="js/dicas.js"></script>
 </body>
 </html>

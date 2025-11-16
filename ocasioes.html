@@ -5,38 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocasiões</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/ocasioes.css">
 </head>
-<body>
+<body class="ocasioes-page">
 
-<header>
-    <h1>Flores Para Cada Momento</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="catalogo.html">Catálogo</a>
-        <a href="ocasioes.html">Ocasiões</a>
-        <a href="dicas.html">Dicas</a>
-        <a href="sobre.html">Sobre</a>
-    </nav>
+<header id="topo">
+    <section class="header-inner">
+        <h1>Flores Para Cada Momento</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="flores.html">Flores</a>
+            <a href="ocasioes.html">Ocasiões</a>
+            <a href="dicas.html">Dicas</a>
+            <a href="sobre.html">Sobre</a>
+
+        </nav>
+    </section>
 </header>
 
-<section class="ocasioes">
-    <div class="oc-item">
-        <img src="img/flor1.jpg">
+<main>
+    <section class="intro-ocasioes" data-animate="fade-up">
+        <h2>Escolha a ocasião e encontre o arranjo perfeito</h2>
+        <p>Cada momento pede um tipo de flor. Clique em uma ocasião para ver sugestões, mensagens e já falar pelo WhatsApp.</p>
+    </section>
+
+    <section class="ocasioes" data-animate="fade-up">
+        <article class="oc-item"
+            data-titulo="Românticas"
+            data-descricao="Flores delicadas, tons suaves ou vibrantes para encantar quem você ama. Ideais para pedidos especiais, surpresas e demonstrações de carinho."
+            data-msg="Quero um arranjo romântico para demonstrar meu amor."
+            data-whatsapp="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20rom%C3%A2ntico%20para%20presentear.">
+        <figure class="oc-img-wrap">
+            <img src="gifs/romance.gif" alt="Flores românticas">
+            <span class="oc-tag">Amor</span>
+        </figure>
         <h3>Românticas</h3>
-    </div>
-    <div class="oc-item">
-        <img src="img/flor2.jpg">
+        <p>Para surpreender em pedidos especiais, jantares e datas marcantes.</p>
+        </article>
+
+        <article class="oc-item"
+                data-titulo="Finados"
+                data-descricao="Arranjos sóbrios e respeitosos, com flores que transmitem paz, saudade e memória afetiva."
+                data-msg="Quero um arranjo para Finados, algo respeitoso e delicado."
+                data-whatsapp="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20para%20Finados.">
+        <figure class="oc-img-wrap">
+            <img src="img/finados.jpeg" alt="Flores para Finados">
+            <span class="oc-tag">Homenagem</span>
+        </figure>
         <h3>Finados</h3>
-    </div>
-    <div class="oc-item">
-        <img src="img/flor3.jpg">
+        <p>Para homenagens cheias de respeito, carinho e lembrança.</p>
+        </article>
+
+        <article class="oc-item"
+                data-titulo="Aniversários"
+                data-descricao="Arranjos cheios de cores e alegria para comemorar mais um ano de vida com estilo."
+                data-msg="Quero um arranjo alegre para aniversário."
+                data-whatsapp="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20de%20flores%20para%20anivers%C3%A1rio.">
+        <figure class="oc-img-wrap">
+            <img src="img/parabens.png" alt="Flores para aniversário">
+            <span class="oc-tag">Celebração</span>
+        </figure>
         <h3>Aniversários</h3>
-    </div>
+        <p>Para comemorar com cores, perfume e boas energias.</p>
+        </article>
+
+    </section>
+</main>
+
+<section class="oc-modal-overlay" data-oc-modal>
+    <section class="oc-modal-dialog">
+        <button class="oc-modal-close" type="button" aria-label="Fechar">&times;</button>
+        <section class="oc-modal-body">
+            <section class="oc-modal-image-wrap">
+                <img src="" alt="" class="oc-modal-img">
+            </section>
+            <section class="oc-modal-info">
+                <h3 class="oc-modal-title"></h3>
+                <p class="oc-modal-description"></p>
+                <section class="oc-modal-extra">
+                    <h4>Sugestão de mensagem</h4>
+                    <p class="oc-modal-message"></p>
+                </section>
+                <section class="oc-modal-actions">
+                    <a href="catalogo.html" class="btn oc-modal-catalogo">Ver opções no catálogo</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn oc-modal-whatsapp">
+                        Falar pelo WhatsApp
+                    </a>
+                </section>
+            </section>
+        </section>
+    </section>
 </section>
 
 <footer>
     <p>© 2025 Cida Flores</p>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> •
+    <a href="https://wa.me/5548988166865" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </footer>
 
+<script src="js/script.js"></script>
+<script src="js/ocasioes.js"></script>
 </body>
 </html>
