@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.querySelector(".catalogo-page .modal-overlay");
     const imgEl = document.querySelector(".catalogo-page .modal-img");
     const titleEl = document.querySelector(".catalogo-page .modal-title");
-    const priceEl = document.querySelector(".catalogo-page .modal-price");
     const descEl = document.querySelector(".catalogo-page .modal-description");
     const whatsappBtn = document.querySelector(".catalogo-page .modal-whatsapp");
     const closeBtn = document.querySelector(".catalogo-page .modal-close");
 
-    if (!overlay || !imgEl || !titleEl || !priceEl || !descEl || !whatsappBtn || !closeBtn) {
+    if (!overlay || !imgEl || !titleEl || !descEl || !whatsappBtn || !closeBtn) {
         return;
     }
 
@@ -20,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         imgEl.src = dados.imgSrc || "";
         imgEl.alt = dados.imgAlt || dados.titulo || "";
         titleEl.textContent = dados.titulo || "";
-        priceEl.textContent = dados.preco || "";
         descEl.textContent = dados.descricao || "";
         whatsappBtn.href = dados.whatsapp || "#";
+
         lastFocusedElement = document.activeElement;
         overlay.classList.add("is-open");
         document.body.classList.add("modal-open");
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const img = item.querySelector("img");
             const titulo = item.querySelector("h3");
-            const preco = item.querySelector("p");
             const botao = item.querySelector(".btn");
             const descricao = item.getAttribute("data-descricao") || "";
 
@@ -54,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 imgSrc: img ? img.getAttribute("src") : "",
                 imgAlt: img ? img.getAttribute("alt") : "",
                 titulo: titulo ? titulo.textContent.trim() : "",
-                preco: preco ? preco.textContent.trim() : "",
                 descricao: descricao,
                 whatsapp: botao ? botao.getAttribute("href") : "#"
             };
@@ -63,9 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    closeBtn.addEventListener("click", function () {
-        fecharModal();
-    });
+    closeBtn.addEventListener("click", fecharModal);
 
     overlay.addEventListener("click", function (event) {
         if (event.target === overlay) {
@@ -89,9 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 });
             },
-            {
-                threshold: 0.2
-            }
+            { threshold: 0.2 }
         );
 
         items.forEach(function (item) {

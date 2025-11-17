@@ -14,7 +14,6 @@
         <h1>Flores & Arranjos</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="catalogo.html">Catálogo</a>
             <a href="flores.html">Flores</a>
             <a href="ocasioes.html">Ocasiões</a>
             <a href="dicas.html">Dicas</a>
@@ -48,9 +47,9 @@
                         Categoria
                         <select id="filtro-categoria">
                             <option value="">Todas</option>
-                            <option value="buque">Buquês</option>
+                            <option value="flores">Flores</option>
                             <option value="arranjo">Arranjos</option>
-                            <option value="vaso">Flores em vaso</option>
+                            <option value="decoracao">Decorações</option>
                         </select>
                     </label>
                 </section>
@@ -64,6 +63,13 @@
                             <option value="romantico">Romântico</option>
                             <option value="condolencias">Condolências</option>
                             <option value="decoracao">Decoração</option>
+                            <option value="simbolico">Simbólico</option>
+                            <option value="sofisticado">Sofisticado</option>
+                            <option value="cerimonias">Cerimônias</option>
+                            <option value="personalizado">Personalizado</option>
+                            <option value="finados">Finados</option>   
+                            <option value="maternidade">Maternidade</option>
+                            <option value="casamento">Casamento</option>
                         </select>
                     </label>
                 </section>
@@ -73,8 +79,6 @@
                         Ordenar
                         <select id="ordem">
                             <option value="relevancia">Relevância</option>
-                            <option value="preco-asc">Preço: menor para maior</option>
-                            <option value="preco-desc">Preço: maior para menor</option>
                             <option value="nome-asc">Nome: A → Z</option>
                         </select>
                     </label>
@@ -100,9 +104,8 @@
         <section class="grade-produtos">
 
             <article class="produto item-animado"
-                     data-categoria="buque"
+                     data-categoria="flores"
                      data-ocasiao="romantico"
-                     data-preco="89.90"
                      data-tags="rosa rosas amor romance cores variadas"
                      data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
@@ -111,9 +114,8 @@
                 <section class="produto-conteudo">
                     <h3>Rosa</h3>
                     <p class="produto-resumo">Várias cores, clássica e símbolo de amor.</p>
-                    <p class="produto-preco">R$ 89,90</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Rosas"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Rosas"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -122,64 +124,18 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="arranjo"
-                     data-ocasiao="aniversario"
-                     data-preco="59.90"
-                     data-tags="margarida margaridas branca amarelo delicada aniversario"
-                     data-gallery="produtos/margarida.jpg,produtos/margarida2.jpeg,produtos/margaridas3.png">
-                <figure class="produto-imagem">
-                    <img src="produtos/margarida.jpg" alt="Margarida – pétalas brancas e centro amarelo.">
-                </figure>
-                <section class="produto-conteudo">
-                    <h3>Margarida</h3>
-                    <p class="produto-resumo">Pétalas brancas e centro amarelo, delicada e alegre.</p>
-                    <p class="produto-preco">R$ 59,90</p>
-                    <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Margaridas"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Comprar pelo WhatsApp
-                    </a>
-                </section>
-            </article>
-
-            <article class="produto item-animado"
-                     data-categoria="buque"
-                     data-ocasiao="aniversario"
-                     data-preco="79.90"
-                     data-tags="girassol girassois amarelo sol alegria"
-                     data-gallery="produtos/girassol.png,produtos/girassol2.jpeg,produtos/girassol3.jpg">
-                <figure class="produto-imagem">
-                    <img src="produtos/girassol.png" alt="Girassol – grande, amarelo, segue a luz do sol.">
-                </figure>
-                <section class="produto-conteudo">
-                    <h3>Girassol</h3>
-                    <p class="produto-resumo">Flor grande e amarela que acompanha a luz do sol.</p>
-                    <p class="produto-preco">R$ 79,90</p>
-                    <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20um%20buqu%C3%AA%20de%20Girass%C3%B3is"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Comprar pelo WhatsApp
-                    </a>
-                </section>
-            </article>
-
-            <article class="produto item-animado"
-                     data-categoria="vaso"
+                     data-categoria="flores"
                      data-ocasiao="decoracao"
-                     data-preco="99.90"
-                     data-tags="tulipa tulipas jardim europeu cores variadas"
-                     data-gallery="produtos/tulipa.png,produtos/tulipa2.png,produtos/tulipa3.jpeg">
+                     data-tags="hortencia azul rosa roxo flores grandes elegância volume"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/tulipa.png" alt="Tulipa – comum em jardins europeus, muitas cores.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Tulipa</h3>
-                    <p class="produto-resumo">Clássica de jardins europeus, disponível em várias cores.</p>
-                    <p class="produto-preco">R$ 99,90</p>
+                    <h3>Hortência</h3>
+                    <p class="produto-resumo">Flores volumosas e elegantes, perfeitas para decoração.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20Tulipas%20para%20presente"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Hort%C3%AAnsia"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -188,42 +144,18 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="buque"
-                     data-ocasiao="romantico"
-                     data-preco="109.90"
-                     data-tags="lirio lirios perfume elegante"
-                     data-gallery="produtos/lirio.jpeg,produtos/lirio2.jpeg,produtos/lirio3.png">
-                <figure class="produto-imagem">
-                    <img src="produtos/lirio.jpeg" alt="Lírio – pétalas elegantes, perfume forte em algumas espécies.">
-                </figure>
-                <section class="produto-conteudo">
-                    <h3>Lírio</h3>
-                    <p class="produto-resumo">Pétalas elegantes e perfume marcante em algumas espécies.</p>
-                    <p class="produto-preco">R$ 109,90</p>
-                    <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20um%20buqu%C3%AA%20de%20L%C3%ADrios"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Comprar pelo WhatsApp
-                    </a>
-                </section>
-            </article>
-
-            <article class="produto item-animado"
-                     data-categoria="arranjo"
+                     data-categoria="flores"
                      data-ocasiao="condolencias"
-                     data-preco="119.90"
-                     data-tags="copo de leite copo-de-leite branco arranjos"
-                     data-gallery="produtos/copoleite.png,produtos/copoleite2.jpg,produtos/copoleite3.png">
+                     data-tags="copo de leite branco elegância paz respeito arranjos formais"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/copoleite.png" alt="Copo-de-leite – branca, muito usada em arranjos.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
                     <h3>Copo-de-leite</h3>
-                    <p class="produto-resumo">Flor branca sofisticada, muito usada em arranjos elegantes.</p>
-                    <p class="produto-preco">R$ 119,90</p>
+                    <p class="produto-resumo">Flor branca e sofisticada, muito usada em arranjos elegantes.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Copo-de-leite"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Copo-de-leite"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -232,20 +164,18 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="vaso"
-                     data-ocasiao="decoracao"
-                     data-preco="69.90"
-                     data-tags="hibisco flor grande regiao quente tropical"
-                     data-gallery="produtos/hibisco.png,produtos/hibisco2.jpg,produtos/hibisco3.jpg">
+                     data-categoria="flores"
+                     data-ocasiao="condolencias"
+                     data-tags="gladiolos palma palmas espiga alto vertical elegância homenagens"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/hibisco.png" alt="Hibisco – flor grande, comum em regiões quentes.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Hibisco</h3>
-                    <p class="produto-resumo">Flor grande e tropical, ideal para ambientes iluminados.</p>
-                    <p class="produto-preco">R$ 69,90</p>
+                    <h3>Gladíolos</h3>
+                    <p class="produto-resumo">Flores altas e ornamentais que dão imponência aos arranjos.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20Hibiscos%20para%20decora%C3%A7%C3%A3o"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Glad%C3%ADolos"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -254,20 +184,18 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="arranjo"
+                     data-categoria="flores"
                      data-ocasiao="aniversario"
-                     data-preco="64.90"
-                     data-tags="crisantemo crisântemo buqu%C3%AAs vasos"
-                     data-gallery="produtos/crisantemo.jpeg,produtos/crisantemo2.png,produtos/crisantemo3.jpeg">
+                     data-tags="girassol amarelo alegria energia sol vibrante"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/crisantemo.jpeg" alt="Crisântemo – muito usado em buquês e vasos.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Crisântemo</h3>
-                    <p class="produto-resumo">Versátil, muito usado em buquês e vasos decorativos.</p>
-                    <p class="produto-preco">R$ 64,90</p>
+                    <h3>Girassol</h3>
+                    <p class="produto-resumo">Flor grande e amarela, símbolo de alegria e energia.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20Cris%C3%A2ntemos"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Girassol"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -276,20 +204,18 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="vaso"
+                     data-categoria="flores"
                      data-ocasiao="decoracao"
-                     data-preco="84.90"
-                     data-tags="azaleia arbusto florido cores variadas"
-                     data-gallery="produtos/azaleia.jpg,produtos/azaleia2.jpg,produtos/azaleia3.jpeg">
+                     data-tags="azaleia arbusto florido cores variadas vaso jardim"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/azaleia.jpg" alt="Azaleia – arbusto florido, muitas cores.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Azaleia</h3>
-                    <p class="produto-resumo">Arbusto florido com muitas cores para jardins e sacadas.</p>
-                    <p class="produto-preco">R$ 84,90</p>
+                    <h3>Azaleias</h3>
+                    <p class="produto-resumo">Arbusto florido com muitas cores e ótima presença decorativa.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20Azaleias"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Azaleias"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -298,20 +224,98 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="buque"
+                     data-categoria="flores"
+                     data-ocasiao="cerimonias"
+                     data-tags="açucena lírio branco perfume delicadeza pureza elegância"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Açucenas</h3>
+                    <p class="produto-resumo">Flor perfumada e delicada, muito usada em cerimônias.</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20A%C3%A7ucenas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="flores"
+                     data-ocasiao="decoracao"
+                     data-tags="estrelícia exótica tropical pássaro cor laranja moderna"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Estrelícia</h3>
+                    <p class="produto-resumo">Flor exótica e chamativa, ideal para arranjos modernos.</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Estrelicia"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjos"
+                     data-ocasiao="personalizado"
+                     data-tags="arranjo personalizado sob medida escolha do cliente"
+                     data-gallery="produtos/arranjoPersonalizado.jpg,produtos/arranjoPersonalizado2.jpg,produtos/arranjoPersonalizado3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/arranjoPersonalizado.jpg" alt="arranjo personalizado sob medida escolha do cliente">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Arranjo Personalizado</h3>
+                    <p class="produto-resumo">Feito exclusivamente conforme o pedido e preferência.</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988314131?text=Quero%20um%20arranjo%20com%20Rosas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjos"
+                     data-ocasiao="finados"
+                     data-tags="arranjo finados homenagem paz serenidade"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Arranjo para Finados</h3>
+                    <p class="produto-resumo">Composição serena para homenagens e lembranças especiais.</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988314131?text=Quero%20um%20arranjo%20com%20Rosas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            <article class="produto item-animado"
+                     data-categoria="arranjos"
                      data-ocasiao="romantico"
-                     data-preco="94.90"
-                     data-tags="camelia cam%C3%A9lia petalas muitas lembra rosa"
-                     data-gallery="produtos/camelia.png,produtos/camelia2.png,produtos/camelia3.png">
+                     data-tags="namorados romantico amor presente vermelho rosa"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/camelia.png" alt="Camélia – flor cheia de pétalas, lembra uma rosa.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Camélia</h3>
-                    <p class="produto-resumo">Flor cheia de pétalas, aparência parecida com a rosa.</p>
-                    <p class="produto-preco">R$ 94,90</p>
+                    <h3>Arranjo Dia dos Namorados</h3>
+                    <p class="produto-resumo">Arranjos com foco em romance e demonstração de afeto.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20Camelias"
+                       href="https://wa.me/5548988314131?text=Quero%20um%20arranjo%20com%20Rosas"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -320,20 +324,38 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="arranjo"
-                     data-ocasiao="decoracao"
-                     data-preco="74.90"
-                     data-tags="cosmo cosmos campestre colorido"
-                     data-gallery="produtos/cosmo.jpg,produtos/cosmo2.png,produtos/cosmo3.png">
+                     data-categoria="arranjos"
+                     data-ocasiao="maternidade"
+                     data-tags="dia das maes carinho gratidão cores suaves"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/cosmo.jpg" alt="Cosmo – flor campestre colorida.">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Cosmo</h3>
-                    <p class="produto-resumo">Flor campestre com visual leve e colorido.</p>
-                    <p class="produto-preco">R$ 74,90</p>
+                    <h3>Arranjo Dia das Mães</h3>
+                    <p class="produto-resumo">Composição delicada para celebrar carinho e gratidão.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20um%20arranjo%20com%20Cosmos"
+                       href="https://wa.me/5548988314131?text=Quero%20um%20arranjo%20com%20Rosas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+            
+            <article class="produto item-animado"
+                     data-categoria="arranjos"
+                     data-ocasiao="casamento"
+                     data-tags="casamento buque cerimonia branco classico elegante"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/rosas.png" alt="Rosa – várias cores, símbolo de amor.">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Arranjo para Casamento</h3>
+                    <p class="produto-resumo">Arranjos elegantes para cerimônias e celebrações.</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988314131?text=Quero%20um%20arranjo%20com%20Rosas"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -342,20 +364,18 @@
             </article>
 
             <article class="produto item-animado"
-                     data-categoria="vaso"
-                     data-ocasiao="decoracao"
-                     data-preco="54.90"
-                     data-tags="violeta violetas vaso pequeno delicada"
-                     data-gallery="produtos/violeta.png,produtos/violeta2.jpg,produtos/violeta3.jpeg">
+                     data-categoria="decoracao"
+                     data-ocasiao="eventos"
+                     data-tags="eventos corporativo social flores ambiente mesa entrada"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
                 <figure class="produto-imagem">
-                    <img src="produtos/violeta.png" alt="Violeta – flor delicada em vaso pequeno.">
+                    <img src="produtos/rosas.png" alt="eventos corporativo social flores ambiente mesa entrada">
                 </figure>
                 <section class="produto-conteudo">
-                    <h3>Violeta</h3>
-                    <p class="produto-resumo">Flor delicada em vaso pequeno, ideal para interiores.</p>
-                    <p class="produto-preco">R$ 54,90</p>
+                    <h3>Decoração para Eventos</h3>
+                    <p class="produto-resumo">Design floral adaptado para eventos corporativos e sociais.</p>
                     <a class="btn"
-                       href="https://wa.me/5548988166865?text=Quero%20Violetas%20em%20vaso"
+                       href="https://wa.me/5548988314131?text=Quero%20um%20arranjo%20com%20Rosas"
                        target="_blank"
                        rel="noopener noreferrer">
                         Comprar pelo WhatsApp
@@ -363,6 +383,27 @@
                 </section>
             </article>
 
+            <article class="produto item-animado"
+                     data-categoria="decoracao"
+                     data-ocasiao="igreja"
+                     data-tags="igreja cerimonia altar flores branco classico"
+                     data-gallery="produtos/rosas.png,produtos/rosas2.jpg,produtos/rosas3.jpg">
+                <figure class="produto-imagem">
+                    <img src="produtos/rosas.png" alt="igreja cerimonia altar flores branco classico">
+                </figure>
+                <section class="produto-conteudo">
+                    <h3>Decoração para Igreja</h3>
+                    <p class="produto-resumo">Estilo clássico e elegante para ambientes religiosos.</p>
+                    <a class="btn"
+                       href="https://wa.me/5548988314131?text=Quero%20fazer%20um%20pedido%20de%20Rosas"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Comprar pelo WhatsApp
+                    </a>
+                </section>
+            </article>
+
+            
         </section>
 
         <section class="mensagem-sem-resultados" aria-live="polite" hidden>
@@ -401,8 +442,8 @@
 
 <footer>
     <p>© 2025 Cida Flores</p>
-    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> •
-    <a href="https://wa.me/5548988166865" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="https://www.instagram.com/mariaaparecidaquartiero/" target="_blank" rel="noopener noreferrer">Instagram</a> •
+    <a href="https://wa.me/5548988314131" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </footer>
 
 <script src="js/script.js"></script>
