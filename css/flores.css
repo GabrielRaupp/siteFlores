@@ -17,35 +17,58 @@
     letter-spacing: 0.04em;
 }
 
+
+
 .flores-page .filtros-bloco {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     background: #ffffff;
     border-radius: 18px;
-    padding: 20px 26px 22px;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    padding: 18px 22px 20px;
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.flores-page .filtros-bloco::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    right: 18px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f7b3c4, #ffccd9, #7aa67f);
 }
 
 .flores-page .filtros-topo {
+    background: transparent;
+    padding: 6px 0 10px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    gap: 12px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
+
 .flores-page .filtros-topo h2 {
-    font-size: 1.35rem;
-    margin-bottom: 4px;
+    font-size: 1.15rem;
+    margin: 0 0 3px;
+    color: #1f2933;
+    font-weight: 600;
 }
 
 .flores-page .filtros-topo p {
-    font-size: 0.95rem;
-    color: #555;
-    max-width: 420px;
+    font-size: 0.86rem;
+    color: #6b7280;
+    margin: 0;
 }
+
 
 .flores-page .filtros-form {
     margin-top: 0;
@@ -53,34 +76,47 @@
 
 .flores-page .filtro-linha {
     display: grid;
-    grid-template-columns: minmax(220px, 2.3fr) repeat(3, minmax(150px, 1fr)) minmax(160px, 0.9fr);
+    grid-template-columns: minmax(230px, 2.2fr) repeat(3, minmax(140px, 1fr));
     gap: 14px 18px;
-    align-items: stretch;
+    align-items: center;
+    padding-top: 4px;
 }
 
 .flores-page .filtro-campo label {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    font-size: 0.86rem;
-    color: #444;
+    gap: 5px;
+    font-size: 0.78rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
 }
 
 .flores-page .filtro-campo input,
 .flores-page .filtro-campo select {
-    padding: 9px 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    font-size: 0.95rem;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    font-size: 0.92rem;
     outline: none;
-    background: #fbfbfb;
-    transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, transform 0.12s ease;
+    background: #f7f7fa;
+    color: #111827;
+    transition:
+        border-color 0.16s ease,
+        box-shadow 0.16s ease,
+        background 0.16s ease,
+        transform 0.1s ease;
+}
+
+.flores-page .filtro-campo input::placeholder {
+    color: #a0a4b3;
 }
 
 .flores-page .filtro-campo input:focus,
 .flores-page .filtro-campo select:focus {
     border-color: var(--verde);
-    box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.14);
+    box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.16);
     background: #ffffff;
     transform: translateY(-1px);
 }
@@ -89,21 +125,30 @@
     width: 100%;
 }
 
-.flores-page .filtro-acoes {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
 .flores-page .btn-reset {
     white-space: nowrap;
-    font-size: 0.9rem;
-    padding-inline: 20px;
+    font-size: 0.82rem;
+    padding: 7px 20px;
     border-radius: 999px;
-    width: 100%;
-    max-width: 170px;
-    margin: 0;
+    background: #f7b3c4;
+    color: #3b3b3b;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    font-weight: 600;
+    cursor: pointer;
+    transform: translateY(0);
+    transition:
+        filter 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
 }
+
+.flores-page .btn-reset:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+}
+
 
 .flores-page .lista-produtos {
     margin-top: 10px;
@@ -208,6 +253,7 @@
     background: rgba(0, 0, 0, 0.03);
     font-size: 0.95rem;
 }
+
 
 body.flores-page.modal-open {
     overflow: hidden;
@@ -416,13 +462,15 @@ body.flores-page.modal-open {
     padding-inline: 26px;
 }
 
+
 @media (max-width: 900px) {
-    .flores-page main {
-        padding-top: 26px;
+    .flores-page .filtros-bloco {
+        padding: 16px 16px 18px;
     }
 
+
     .flores-page .filtros-bloco {
-        padding: 18px 18px 18px;
+        padding: 16px 16px 16px;
     }
 
     .flores-page .filtros-topo {
@@ -463,22 +511,18 @@ body.flores-page.modal-open {
     }
 
     .flores-page .filtros-bloco {
-        padding: 16px 14px 18px;
-        gap: 14px;
+        padding: 12px 14px;
+        gap: 10px;
     }
 
     .flores-page .filtros-topo {
+        flex-direction: column;
         align-items: flex-start;
-        text-align: left;
-    }
-
-    .flores-page .filtros-topo p {
-        max-width: none;
     }
 
     .flores-page .filtro-linha {
         grid-template-columns: 1fr;
-        gap: 10px 0;
+        gap: 10px;
     }
 
     .flores-page .filtro-campo label {
@@ -486,7 +530,8 @@ body.flores-page.modal-open {
     }
 
     .flores-page .btn-reset {
-        width: 100%;
+        align-self: flex-start;
+        width: auto;
     }
 
     .flores-page .grade-produtos {

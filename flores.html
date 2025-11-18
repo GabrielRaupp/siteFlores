@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/jpeg">
+
     <title>Flores • Catálogo</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/flores.css">
@@ -24,12 +26,20 @@
 
 <main>
     <section class="filtros-bloco" aria-label="Filtros e campo de pesquisa">
-        <section class="filtros-topo">
-            <h2>Encontre a flor perfeita</h2>
-            <p>Busque pelo nome ou filtre por categoria, ocasião e valor.</p>
-        </section>
-
-        <form class="filtros-form" autocomplete="off">
+        <header class="filtros-topo">
+            <div>
+                <h2>Encontre a flor perfeita</h2>
+                <p>Busque por nome, categoria ou ocasião.</p>
+            </div>
+    
+            <button type="reset"
+                    class="btn btn-reset"
+                    form="filtros-form">
+                Limpar filtros
+            </button>
+        </header>
+    
+        <form class="filtros-form" id="filtros-form" autocomplete="off">
             <section class="filtro-linha">
                 <section class="filtro-campo filtro-busca">
                     <label for="campo-busca">
@@ -41,7 +51,7 @@
                             aria-label="Buscar produtos por nome ou ocasião">
                     </label>
                 </section>
-
+    
                 <section class="filtro-campo">
                     <label for="filtro-categoria">
                         Categoria
@@ -53,7 +63,7 @@
                         </select>
                     </label>
                 </section>
-
+    
                 <section class="filtro-campo">
                     <label for="filtro-ocasiao">
                         Ocasião
@@ -73,7 +83,7 @@
                         </select>
                     </label>
                 </section>
-
+    
                 <section class="filtro-campo">
                     <label for="ordem">
                         Ordenar
@@ -83,15 +93,10 @@
                         </select>
                     </label>
                 </section>
-
-                <section class="filtro-acoes">
-                    <button type="reset" class="btn btn-reset">
-                        Limpar filtros
-                    </button>
-                </section>
             </section>
         </form>
     </section>
+    
 
     <section class="lista-produtos" aria-live="polite">
         <section class="lista-cabecalho">
@@ -126,7 +131,7 @@
             <article class="produto item-animado"
                      data-categoria="flores"
                      data-ocasiao="decoracao"
-                     data-tags="hortencia azul rosa roxo flores grandes elegância volume"
+                     data-tags="hortencia azul  roxo flores grandes elegância volume"
                      data-gallery="produtos/hortencia.jpg,produtos/hortencia2.jpeg,produtos/hortencia3.jpeg">
                 <figure class="produto-imagem">
                     <img src="produtos/hortencia.jpg" alt="Hortência – flores volumosas e elegantes, perfeitas para decoração.">
@@ -187,7 +192,7 @@
                      data-categoria="flores"
                      data-ocasiao="aniversario"
                      data-tags="girassol amarelo alegria energia sol vibrante"
-                     data-gallery="produtos/girassol.jpeg,produtos/girassol2.jpg,produtos/girassol3.jpg">
+                     data-gallery="produtos/girassol.jpeg,produtos/girassol2.jpeg,produtos/girassol3.jpeg">
                 <figure class="produto-imagem">
                     <img src="produtos/girassol.jpeg" alt="Girassol – flor grande e amarela, símbolo de alegria e energia.">
                 </figure>

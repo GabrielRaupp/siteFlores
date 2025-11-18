@@ -1,0 +1,122 @@
+.sobre-page header {
+    background: #5c765a;
+    padding: 18px 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre-page header h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.sobre-page header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.sobre-page header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.sobre-page header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transform: translateX(-50%);
+    transition: width 0.25s ease;
+}
+
+.sobre-page header nav a:hover {
+    color: #f0f0f0;
+}
+
+.sobre-page header nav a:hover::after {
+    width: 70%;
+}
+
+.sobre-page .texto {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+.sobre-page .texto h2 {
+    margin-top: 26px;
+    margin-bottom: 8px;
+    color: var(--verde-escuro);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sobre-page .texto h2:first-of-type {
+    margin-top: 0;
+}
+
+.sobre-page .texto h2::before {
+    content: "";
+    width: 22px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--acento), var(--verde));
+}
+
+.sobre-page .texto p {
+    margin-bottom: 16px;
+    text-align: justify;
+    color: #444;
+}
+
+.sobre-page footer {
+    margin-top: auto;
+}
+
+@media (max-width: 700px) {
+    .sobre-page header {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 20px;
+    }
+
+    .sobre-page header h1 {
+        font-size: 1.6rem;
+    }
+
+    .sobre-page header nav {
+        gap: 16px;
+    }
+
+    .sobre-page .texto {
+        margin: 25px 16px 35px;
+        padding: 24px 20px;
+        border-radius: 14px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+    }
+
+    .sobre-page .texto h2 {
+        font-size: 1.3rem;
+    }
+}
